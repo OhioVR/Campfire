@@ -5,6 +5,8 @@ RUN apt-get install git
 # set working directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+COPY src /usr/src/app/src
+COPY public /usr/src/app/public
 
 # add `/usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
